@@ -1,0 +1,11 @@
+var i0:int, j0:int;
+begin
+  i0 = 0;
+  while (i0 < 100-25) do
+    j0 = 0;
+    while (j0 < 25) do
+      j0 = j0+1;
+    done;
+    i0 = i0+1;
+  done;
+end

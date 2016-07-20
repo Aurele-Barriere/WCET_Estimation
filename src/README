@@ -1,0 +1,27 @@
+WCET estimation,
+with Abstract Interpretation and Constraint Programming
+
+The code consists in several ocaml modules.
+The following modules :
+    - wcetCsp.ml
+    - wcetKirchhoff.ml
+    - wcetToConstraints.ml
+are designed to produce constraints with the syntax of AbSolute. These can be changed to use another Solver but must keep the same signature.
+Moreover, the file estimate.sh, that executes the whole method, depends on AbSolute and Interproc. It must be changed to use another Solver or another Abstract Interpreter.
+
+How to use :
+Type 'make' to create the executable wcetAnalysis.
+You can type 'make clean' to clean all intermediate files (.cmo, .cmx, .cmi) or 'make cleanall' to also remove the executable.
+Type 'sh estimate.sh' to estimate the WCET of the programm in the input file.
+Type 'sh clean.sh' to remove all intermediate files (.csp). The final optimization problem will be kept.
+
+
+Dependencies :
+
+AbSolute https://github.com/mpelleau/AbSolute
+Interproc http://pop-art.inrialpes.fr/people/bjeannet/bjeannet-forge/interproc/index.html
+Ocaml
+Bash
+grep
+sed
+awk
